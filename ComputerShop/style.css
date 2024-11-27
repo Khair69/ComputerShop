@@ -7,6 +7,7 @@ box-sizing: border-box;
 }
 
 body {
+    padding: 40px;
 font-family: 'Nunito', sans-serif;
 color: #384047;
 background-color: #1b1b1b;
@@ -65,7 +66,7 @@ border-radius: 2px;
 
 button {
 padding: 19px 39px 18px 39px;
-color: #FFF;
+color: black;
 background-color: #f5d67b;
 font-size: 18px;
 text-align: center;
