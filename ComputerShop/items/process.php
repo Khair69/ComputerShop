@@ -7,20 +7,14 @@ require '../dbconn/connection.php';
     $cost =$_POST['Cost'];
     $numInStock =$_POST['NumInStock'];
     
-    echo ($itemName);
-    echo ($cost);
-    echo ($numInStock);
-    
     $query = "INSERT INTO `items` (`ItemName`,`Cost`,`NumInStock`) VALUES ('$itemName', '$cost', '$numInStock')";
-    $rowCount = $dbConn->exec($query);
-    
-    if ($rowCount == 1)
-    {
+    try{
+        $rowCount = $dbConn->exec($query);
         echo " <script> alert('New Item Added ✅ '); window.open('table.php','_self'); </script> ";
     }
-    else
-    {
-        echo "error";
+    catch(Exception $e){
+        echo " <script> alert('An Error Occured'); </script> ";
+        error_log("$e", 3, "../dbconn/errors.log");
     }
 
 $dbConn = NULL;

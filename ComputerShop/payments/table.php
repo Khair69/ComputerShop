@@ -2,7 +2,7 @@
 
 include '../dbconn/connection.php';
 
-$query= "SELECT * FROM `items`";
+$query= "SELECT * FROM `payments`";
 
 try{
 	$data= $dbConn->query($query);
@@ -13,6 +13,8 @@ catch(Exception $e){
 }
 
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +29,10 @@ catch(Exception $e){
 	<link rel="stylesheet" type="text/css" href="../wwwroot/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../wwwroot/css/main.css">
 
-    <title>View items in inventory</title>
+    <title>View Payments</title>
     <script>
         function add(){window.open("form.php", "_self");}
-        function goHome(){window.open("../index.php", "_self");}
+		function goHome(){window.open("../index.php", "_self");}
     </script>
 </head>
 <div class="navy">
@@ -43,9 +45,11 @@ catch(Exception $e){
 				<thead>
 					<tr class="row100 head">
 						<th class="cell100 column1">ID</th>
-						<th class="cell100 column2">Name</th>
-						<th class="cell100 column3">Price per Unit</th>
-						<th class="cell100 column4">Quantity</th>
+						<th class="cell100 column2">Amount</th>
+						<th class="cell100 column3">Date</th>
+						<th class="cell100 column4">Item</th>
+						<th class="cell100 column5">Employee</th>
+						<th class="cell100 column6">Customer</th>
 					</tr>
 				</thead>
 			</table>
@@ -58,10 +62,12 @@ catch(Exception $e){
                     foreach($data as $row){
                     echo ('
 					<tr class="row100 body">
-                    <td class="cell100 column1">'.$row["ItemId"].'</td>
-                    <td class="cell100 column2">'.$row["ItemName"].'</td>
-                    <td class="cell100 column3">'.$row["Cost"].'</td>
-                    <td class="cell100 column4">'.$row["NumInStock"].'</td>
+                    <td class="cell100 column1">'.$row["PaymentId"].'</td>
+                    <td class="cell100 column2">'.$row["Amount"].'</td>
+                    <td class="cell100 column3">'.$row["Date"].'</td>
+                    <td class="cell100 column4">'.$row["ProductId"].'</td>
+					<td class="cell100 column5">'.$row["SoldById"].'</td>
+                    <td class="cell100 column6">'.$row["SoldToId"].'</td>
                     </tr>
                     ');
                     }
@@ -71,7 +77,7 @@ catch(Exception $e){
 		</div>
 	</div>
 
-    <button onclick="add()">Add Item</button>
+    <button onclick="add()">Add Payment</button>
 
 
 

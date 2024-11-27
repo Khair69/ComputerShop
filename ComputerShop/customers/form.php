@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Item</title>
+    <title>Add Customer</title>
     <link rel="stylesheet" href="../wwwroot/css/style.css"/>
     <script>
         function goHome(){window.open("../index.php", "_self");}
@@ -18,18 +18,23 @@
     <div class="content">
     <form action="process.php" method="post">
 
-    <h1>Add Item</h1>
+    <h1>Add Customer Record</h1>
 
     <fieldset>
-        <label for="ItemName">Name:</label>
-        <input type="text" id="ItemName" name="ItemName">
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name">
 
-        <label for="Cost">Price:</label>
-        <input type="number" id="Cost" name="Cost">
+        <label for="Mobile">Phone Number:</label>
+        <input type="tel" id="Mobile" name="Mobile">
 
-        <label for="NumInStock">Number in stock:</label>
-        <input type="number" id="NumInStock" name="NumInStock">
+        <label for="Address">Address:</label>
+        <input type="text" id="Address" name="Address">
 
+        <label for="HTel">Home Number:<small>(optional)</small></label>
+        <input type="tel" id="HTel" name="HTel">
+
+        <label for="City">City:</label>
+        <input type="text" id="City" name="City">
     </fieldset>
     
     <button type="submit">Add</button>

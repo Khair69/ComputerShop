@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Lato-Regular;
+    src: url('../fonts/Lato/Lato-Regular.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Lato-Bold;
+    src: url('../fonts/Lato/Lato-Bold.ttf'); 
+  }
+
 *,
 *:before,
 *:after {
@@ -7,11 +17,16 @@ box-sizing: border-box;
 }
 
 body {
-    padding: 70px;
-font-family: 'Nunito', sans-serif;
+    padding:0px 30px;
+    font-family: 'Lato-Regular';
 color: #384047;
 background-color: #1b1b1b;
 }
+
+.content{
+    margin-top: 70px;
+  }
+  
 
 form {
 max-width: 300px;
@@ -65,6 +80,7 @@ border-radius: 2px;
 }
 
 button {
+    font-family: 'Lato-Regular';
 padding: 19px 39px 18px 39px;
 color: black;
 background-color: #f5d67b;
@@ -126,3 +142,6 @@ input::-webkit-inner-spin-button {
 margin: 0;
 }
 
+.navy{
+    text-align: center;
+}
