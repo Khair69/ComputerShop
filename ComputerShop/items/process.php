@@ -1,6 +1,6 @@
 <?php
 
-require 'connection.php';
+require '../dbconn/connection.php';
 
 // $validate =true;
     $itemName =$_POST['ItemName'];
@@ -16,7 +16,7 @@ require 'connection.php';
     
     if ($rowCount == 1)
     {
-        echo " <script> alert('New Item Added ✅ ') </script> ";
+        echo " <script> alert('New Item Added ✅ '); window.open('table.php','_self'); </script> ";
     }
     else
     {

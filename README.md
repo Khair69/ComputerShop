@@ -5,8 +5,8 @@ Computer Shop is a website built in php for managing a computer parts shop
 ## Installation
 
 import the sql file into mysql
-run index.php
+and run index.php
 
 ## Contributors
 
-![alt text](https://imgur.com/a/BNEnTEf)
+![https://imgur.com/a/BNEnTEf](https://imgur.com/a/BNEnTEf)
