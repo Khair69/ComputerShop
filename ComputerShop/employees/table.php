@@ -26,7 +26,8 @@ catch(Exception $e){
 	<link rel="stylesheet" type="text/css" href="../wwwroot/vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="../wwwroot/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../wwwroot/css/main.css">
-
+	<link rel="icon" type="image/x-icon" href="../wwwroot/icons/gpu.png">
+	
     <title>View Employees</title>
     <script>
         function add(){window.open("form.php", "_self");}
@@ -41,12 +42,14 @@ catch(Exception $e){
 		<div class="table100-head">
 			<table>
 				<thead>
-					<tr class="row100 head">
+					<tr class="row100 emp head">
 						<th class="cell100 column1">ID</th>
 						<th class="cell100 column2">Name</th>
 						<th class="cell100 column3">Phone Number</th>
 						<th class="cell100 column4">Email</th>
 						<th class="cell100 column5">Extension</th>
+						<th class="cell100 column6"></th>
+						<th class="cell100 column7"></th>
 					</tr>
 				</thead>
 			</table>
@@ -58,12 +61,24 @@ catch(Exception $e){
                     <?php 
                     foreach($data as $row){
                     echo ('
-					<tr class="row100 body">
+					<tr class="row100 emp body">
                     <td class="cell100 column1">'.$row["EmployeeId"].'</td>
                     <td class="cell100 column2">'.$row["Name"].'</td>
                     <td class="cell100 column3">'.$row["Mobile"].'</td>
                     <td class="cell100 column4">'.$row["Email"].'</td>
 					<td class="cell100 column5">'.$row["Extension"].'</td>
+					<td class="cell100 column6">
+						<form action="editForm.php" method="post">
+							<input type="hidden" value="'.$row["EmployeeId"].'" name="EmployeeId"/>
+							<button class="tta" type="submmit">Edit</button>
+						</form>					
+					</td>
+                    <td class="cell100 column7">
+						<form action="delete.php" method="post">
+							<input type="hidden" value="'.$row["EmployeeId"].'" name="EmployeeId"/>
+							<button class="tta" type="submmit">Delete</button>
+						</form>					
+					</td>
                     </tr>
                     ');
                     }
@@ -73,7 +88,7 @@ catch(Exception $e){
 		</div>
 	</div>
 
-    <button onclick="add()">Add Employee Record</button>
+    <button class="bigg" onclick="add()">Add Employee Record</button>
 
 
 

@@ -74,7 +74,7 @@ textarea:focus, input:focus {
 }
 
 /* ------------------------------------ */
-button {
+button.bigg {
   font-family: 'Lato-Regular';
   padding: 19px 39px 18px 39px;
   color: black;
@@ -87,15 +87,28 @@ button {
   border: 1px solid #f5d67b;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(245, 214, 123, 0.1) inset;
-  margin-bottom: 10px;
   }
 
 button:hover {
-	cursor: pointer;
+	cursor:pointer;
 }
 
 iframe {
 	border: none !important;
+}
+
+button.tta{
+  font-family: 'Lato-Regular';
+  color: black;
+  background-color: #f5d67b;
+  font-size: 15px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  border: 1px solid #f5d67b;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(245, 214, 123, 0.1) inset;
+  width: 100%;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -156,30 +169,6 @@ table {
 th, td {
   font-weight: unset;
   padding-right: 10px;
-}
-.column1 {
-  width: 12%;
-  padding-left: 40px;
-}
-
-.column2 {
-  width: 40%;
-}
-
-.column3 {
-  width: 20%;
-}
-
-.column4 {
-  width: 10%;
-}
-
-.column5 {
-  width: 10%;
-}
-
-.column6{
-  width: 8%;
 }
 
 .table100-head th {
@@ -261,3 +250,101 @@ th, td {
 .table100.ver3 .ps__rail-y .ps__thumb-y::before {
   background-color: #f5d67b;
 }
+
+/*-----------items-------------*/
+.items .column1{
+  width:9%;
+}
+.items .column2{
+  width:40%;
+}
+.items .column3{
+  width:25%;
+}
+.items .column4{
+  width:10%;
+}
+.items .column5{
+  width:8%;
+}
+.items .column6{
+  width:8%;
+}
+
+/*-----------customers-------------*/
+.cust .column1{
+  width:9%;
+}
+.cust .column2{
+  width:30%;
+}
+.cust .column3{
+  width:10%;
+}
+.cust .column4{
+  width:17%;
+}
+.cust .column5{
+  width:9%;
+}
+.cust .column6{
+  width:9%;
+}
+.cust .column7{
+  width:8%;
+}
+.cust .column8{
+  width:8%;
+}
+
+/*-----------employees-------------*/
+.emp .column1{
+  width:9%;
+}
+.emp .column2{
+  width:33%;
+}
+.emp .column3{
+  width:12%;
+}
+.emp .column4{
+  width:20%;
+}
+.emp .column5{
+  width:9%;
+}
+.emp .column6{
+  width:8%;
+}
+.emp .column7{
+  width:8%;
+}
+
+/*-----------payment-------------*/
+.pay .column1{
+  width:9%;
+}
+.pay .column2{
+  width:12%;
+}
+.pay .column3{
+  width:18%;
+}
+.pay .column4{
+  width:17%;
+}
+.pay .column5{
+  width:17%;
+}
+.pay .column6{
+  width:11%;
+}
+.pay .column7{
+  width:8%;
+}
+.pay .column8{
+  width:8%;
+}
+
+
+

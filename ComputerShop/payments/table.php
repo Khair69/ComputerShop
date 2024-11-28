@@ -28,6 +28,7 @@ catch(Exception $e){
 	<link rel="stylesheet" type="text/css" href="../wwwroot/vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="../wwwroot/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../wwwroot/css/main.css">
+	<link rel="icon" type="image/x-icon" href="../wwwroot/icons/gpu.png">
 
     <title>View Payments</title>
     <script>
@@ -43,13 +44,15 @@ catch(Exception $e){
 		<div class="table100-head">
 			<table>
 				<thead>
-					<tr class="row100 head">
+					<tr class="row100 pay head">
 						<th class="cell100 column1">ID</th>
 						<th class="cell100 column2">Amount</th>
 						<th class="cell100 column3">Date</th>
 						<th class="cell100 column4">Item</th>
 						<th class="cell100 column5">Employee</th>
 						<th class="cell100 column6">Customer</th>
+						<th class="cell100 column7"></th>
+						<th class="cell100 column8"></th>
 					</tr>
 				</thead>
 			</table>
@@ -59,15 +62,28 @@ catch(Exception $e){
 			<table>
 				<tbody>
                     <?php 
-                    foreach($data as $row){
+                    foreach($data as $row){					
                     echo ('
-					<tr class="row100 body">
+					<tr class="row100 pay body">
                     <td class="cell100 column1">'.$row["PaymentId"].'</td>
                     <td class="cell100 column2">'.$row["Amount"].'</td>
                     <td class="cell100 column3">'.$row["Date"].'</td>
                     <td class="cell100 column4">'.$row["ProductId"].'</td>
 					<td class="cell100 column5">'.$row["SoldById"].'</td>
                     <td class="cell100 column6">'.$row["SoldToId"].'</td>
+					<td class="cell100 column7">
+						<form action="editForm.php" method="post">
+							<input type="hidden" value="'.$row["PaymentId"].'" name="PaymentId"/>
+							<button class="tta" type="submmit">Edit</button>
+						</form>					
+					</td>
+                    <td class="cell100 column8">
+						<form action="delete.php" method="post">
+							<input type="hidden" value="'.$row["PaymentId"].'" name="PaymentId"/>
+							<button class="tta" type="submmit">Delete</button>
+						</form>					
+					</td>
+
                     </tr>
                     ');
                     }
@@ -77,7 +93,7 @@ catch(Exception $e){
 		</div>
 	</div>
 
-    <button onclick="add()">Add Payment</button>
+    <button class="bigg" onclick="add()">Add Payment</button>
 
 
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Customer</title>
     <link rel="stylesheet" href="../wwwroot/css/style.css"/>
+	<link rel="icon" type="image/x-icon" href="../wwwroot/icons/gpu.png">
     <script>
         function goHome(){window.open("../index.php", "_self");}
         function goView(){window.open("table.php", "_self");}
@@ -37,7 +38,7 @@
         <input type="text" id="City" name="City">
     </fieldset>
     
-    <button type="submit">Add</button>
+    <button class="bigg" type="submit">Add</button>
 
     </form>
     </div>
